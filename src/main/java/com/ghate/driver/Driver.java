@@ -1,11 +1,11 @@
-package com.tmb.driver;
+package com.ghate.driver;
 
 import java.util.Objects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.tmb.constants.FrameworkConstants;
+import com.ghate.constants.FrameworkConstants;
 
 public class Driver {
 
@@ -22,9 +22,10 @@ public class Driver {
 
 	public static void quitDriver()
 	{
-		if(Objects.isNull(driver))
+		if(Objects.nonNull(driver))
 		{
 			driver.quit();
+			driver=null;
 			
 		}
 	}

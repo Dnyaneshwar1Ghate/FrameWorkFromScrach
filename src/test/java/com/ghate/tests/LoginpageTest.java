@@ -1,11 +1,11 @@
-package com.tmb.tests;
+package com.ghate.tests;
 
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
-import com.tmb.driver.Driver;
+import com.ghate.driver.Driver;
 
 
 

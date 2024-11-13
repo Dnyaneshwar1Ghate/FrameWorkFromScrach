@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.tmb.tests.LoginpageTest"/>
-      <class name="com.tmb.tests.HomePageTest"/>
+      <class name="com.ghate.tests.LoginpageTest"/>
+      <class name="com.ghate.tests.HomePageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

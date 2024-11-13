@@ -2,38 +2,38 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-13T20:09:26Z" name="Suite" finished-at="2024-11-13T20:09:45Z" duration-ms="18959">
+  <suite started-at="2024-11-13T20:21:19Z" name="Suite" finished-at="2024-11-13T20:21:49Z" duration-ms="30030">
     <groups>
     </groups>
-    <test started-at="2024-11-13T20:09:26Z" name="Test" finished-at="2024-11-13T20:09:45Z" duration-ms="18959">
-      <class name="com.tmb.tests.LoginpageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.tmb.tests.LoginpageTest@68267da0]" started-at="2024-11-13T20:09:26Z" name="setup" finished-at="2024-11-13T20:09:38Z" duration-ms="12057" status="PASS">
+    <test started-at="2024-11-13T20:21:19Z" name="Test" finished-at="2024-11-13T20:21:49Z" duration-ms="30030">
+      <class name="com.ghate.tests.LoginpageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ghate.tests.LoginpageTest@68267da0]" started-at="2024-11-13T20:21:19Z" name="setup" finished-at="2024-11-13T20:21:28Z" duration-ms="9466" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test1()[pri:0, instance:com.tmb.tests.LoginpageTest@68267da0]" started-at="2024-11-13T20:09:38Z" name="test1" finished-at="2024-11-13T20:09:42Z" duration-ms="3397" status="PASS">
+        <test-method signature="test1()[pri:0, instance:com.ghate.tests.LoginpageTest@68267da0]" started-at="2024-11-13T20:21:28Z" name="test1" finished-at="2024-11-13T20:21:32Z" duration-ms="3270" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="tesrDown()[pri:0, instance:com.tmb.tests.LoginpageTest@68267da0]" started-at="2024-11-13T20:09:42Z" name="tesrDown" finished-at="2024-11-13T20:09:42Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tesrDown()[pri:0, instance:com.ghate.tests.LoginpageTest@68267da0]" started-at="2024-11-13T20:21:32Z" name="tesrDown" finished-at="2024-11-13T20:21:35Z" duration-ms="3445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tesrDown -->
-      </class> <!-- com.tmb.tests.LoginpageTest -->
-      <class name="com.tmb.tests.HomePageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.tmb.tests.HomePageTest@2638011]" started-at="2024-11-13T20:09:42Z" name="setup" finished-at="2024-11-13T20:09:42Z" duration-ms="2" status="PASS">
+      </class> <!-- com.ghate.tests.LoginpageTest -->
+      <class name="com.ghate.tests.HomePageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ghate.tests.HomePageTest@2638011]" started-at="2024-11-13T20:21:35Z" name="setup" finished-at="2024-11-13T20:21:44Z" duration-ms="8520" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test3()[pri:0, instance:com.tmb.tests.HomePageTest@2638011]" started-at="2024-11-13T20:09:42Z" name="test3" finished-at="2024-11-13T20:09:45Z" duration-ms="3445" status="PASS">
+        <test-method signature="test3()[pri:0, instance:com.ghate.tests.HomePageTest@2638011]" started-at="2024-11-13T20:21:44Z" name="test3" finished-at="2024-11-13T20:21:47Z" duration-ms="3313" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test3 -->
-        <test-method is-config="true" signature="tesrDown()[pri:0, instance:com.tmb.tests.HomePageTest@2638011]" started-at="2024-11-13T20:09:45Z" name="tesrDown" finished-at="2024-11-13T20:09:45Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tesrDown()[pri:0, instance:com.ghate.tests.HomePageTest@2638011]" started-at="2024-11-13T20:21:47Z" name="tesrDown" finished-at="2024-11-13T20:21:49Z" duration-ms="1974" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tesrDown -->
-      </class> <!-- com.tmb.tests.HomePageTest -->
+      </class> <!-- com.ghate.tests.HomePageTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
