@@ -1,5 +1,7 @@
 package com.tbb.driver;
 
+import java.util.Objects;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -10,7 +12,7 @@ public class Driver {
 	public static WebDriver driver;
 	public static void initDriver()
 	{
-		if(driver==null)
+		if(Objects.isNull(driver))
 		{
 			System.setProperty("webdriver.gecko.driver",FrameworkConstants.getFirepath());
 			driver = new FirefoxDriver();
@@ -20,7 +22,11 @@ public class Driver {
 
 	public static void quitDriver()
 	{
-		driver.quit();
+		if(Objects.isNull(driver))
+		{
+			driver.quit();
+			
+		}
 	}
 
 }
