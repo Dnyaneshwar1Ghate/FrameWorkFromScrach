@@ -12,13 +12,13 @@ public class BaseTest {
 		
 	}
 	@BeforeMethod
-	public void setup()
+	protected void setup()
 	{
 		Driver.initDriver();
 		
 	}
 	@AfterMethod
-	public void tesrDown()
+	protected void tesrDown()
 	{
 		Driver.quitDriver();
 	}

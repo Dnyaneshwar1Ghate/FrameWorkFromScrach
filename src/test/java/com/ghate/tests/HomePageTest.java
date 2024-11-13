@@ -19,5 +19,12 @@ public final class HomePageTest extends BaseTest {
 		DriverManager.getDriver().findElement(By.name("q")).sendKeys("All About Testing",Keys.ENTER);
 		Thread.sleep(3000);
 	}
+	@Test
+	void test3() throws InterruptedException
+	{
+		Driver.initDriver();
+		DriverManager.getDriver().findElement(By.name("q")).sendKeys("All About Testing",Keys.ENTER);
+		Thread.sleep(3000);
+	}
 
 }

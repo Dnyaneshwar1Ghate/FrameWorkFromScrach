@@ -2,25 +2,27 @@ package com.ghate.driver;
 
 import java.util.Objects;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.ghate.constants.FrameworkConstants;
 
 public class Driver {
-
-	private static WebDriver driver;
 	
-	
+	private Driver()
+	{
+		
+	}
 	
 	
 	public static void initDriver()
 	{
-		if(Objects.isNull(driver))
+		
+		
+		if(Objects.isNull(DriverManager.getDriver()))
 		{
 			System.setProperty("webdriver.gecko.driver",FrameworkConstants.getFirepath());
-			driver = new FirefoxDriver();
-			DriverManager.setDriver(driver);
+			
+			DriverManager.setDriver(new FirefoxDriver());
 			DriverManager.getDriver().get("https://google.com");
 		}
 	}
@@ -31,6 +33,7 @@ public class Driver {
 		{
 			DriverManager.getDriver().quit();
 			DriverManager.unLoad();
+			
 			
 		}
 	}

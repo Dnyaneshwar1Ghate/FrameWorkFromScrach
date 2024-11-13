@@ -7,9 +7,6 @@ import org.testng.annotations.Test;
 
 import com.ghate.driver.Driver;
 import com.ghate.driver.DriverManager;
-
-
-
 public final class LoginpageTest extends BaseTest {
 
 	private LoginpageTest()
