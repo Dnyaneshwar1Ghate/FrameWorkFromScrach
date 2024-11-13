@@ -20,4 +20,8 @@ private static ThreadLocal<WebDriver> dr=new ThreadLocal<>();
 	{
 		dr.remove();
 	}
+	public static Object manage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

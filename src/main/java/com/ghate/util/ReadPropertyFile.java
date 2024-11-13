@@ -10,15 +10,15 @@ public final class ReadPropertyFile {
 
 	}
 
-	public static String getValue(String key) throws Exception
+	public static String getValue(String key1) throws Exception
 	{
 		Properties property=new Properties();
-		FileInputStream file=new FileInputStream(System.getProperty(("user.dir")+"src/test/resources/config/config.properties"));
+		FileInputStream file=new FileInputStream(System.getProperty(("user.dir")+"config.properties"));
 		property.load(file);
-		String value=property.getProperty(key);
+		String value=property.getProperty(key1);
 		if(value==null)
 		{
-			throw new Exception("Property name"+key+"is not found , please check config.properties file ");
+			throw new Exception("Property name"+key1+"is not found , please check config.properties file ");
 			
 		}
 		return value;

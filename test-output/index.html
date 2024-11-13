@@ -133,10 +133,11 @@
                   <a name="test2">
                   </a> <!-- test2 -->
                   <span class="method-name">test2</span>
-                  <div class="stack-trace">java.lang.Error: Unresolved compilation problem: 
-	url cannot be resolved to a variable
-
-	at com.ghate.driver.Driver.initDriver(Driver.java:27)
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:149)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)
+	at com.ghate.util.ReadPropertyFile.getValue(ReadPropertyFile.java:16)
+	at com.ghate.driver.Driver.initDriver(Driver.java:28)
 	at com.ghate.tests.BaseTest.setup(BaseTest.java:17)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
@@ -158,10 +159,11 @@
                   <a name="test1">
                   </a> <!-- test1 -->
                   <span class="method-name">test1</span>
-                  <div class="stack-trace">java.lang.Error: Unresolved compilation problem: 
-	url cannot be resolved to a variable
-
-	at com.ghate.driver.Driver.initDriver(Driver.java:27)
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:149)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)
+	at com.ghate.util.ReadPropertyFile.getValue(ReadPropertyFile.java:16)
+	at com.ghate.driver.Driver.initDriver(Driver.java:28)
 	at com.ghate.tests.BaseTest.setup(BaseTest.java:17)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
@@ -264,6 +266,13 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">com.ghate.tests.LoginpageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">test1</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">com.ghate.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">test2</span>
@@ -272,10 +281,6 @@ return data;
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.ghate.tests.LoginpageTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">test1</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method before">
                 <img src="failed.png">
                 </img>

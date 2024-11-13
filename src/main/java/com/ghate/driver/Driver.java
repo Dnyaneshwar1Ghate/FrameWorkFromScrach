@@ -24,7 +24,9 @@ public class Driver {
 			System.setProperty("webdriver.gecko.driver",FrameworkConstants.getFirepath());
 			
 			DriverManager.setDriver(new FirefoxDriver());
-			DriverManager.getDriver().get(ReadPropertyFile.getValue("url"));
+			Thread.sleep(3000);
+			DriverManager.getDriver().get(ReadPropertyFile.getValue("URL"));
+			Thread.sleep(3000);
 		}
 	}
 
