@@ -12,7 +12,7 @@ public final class HomePageTest extends BaseTest {
 		
 	}
 	@Test
-	void test3() throws InterruptedException
+	void test2() throws InterruptedException
 	{
 		Driver.initDriver();
 		Driver.driver.findElement(By.name("q")).sendKeys("All About Testing",Keys.ENTER);
