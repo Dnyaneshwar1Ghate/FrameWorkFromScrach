@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
       <class name="com.ghate.tests.HomePageTest">
         <methods>
           <include name="setup"/>
-          <include name="test3"/>
           <include name="tesrDown"/>
+          <include name="test2"/>
         </methods>
       </class> <!-- com.ghate.tests.HomePageTest -->
+      <class name="com.ghate.tests.LoginpageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tesrDown"/>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- com.ghate.tests.LoginpageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

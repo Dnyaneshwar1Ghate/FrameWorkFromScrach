@@ -1,35 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-13T20:56:28Z" name="Suite" finished-at="2024-11-13T20:56:58Z" duration-ms="30189">
+  <suite started-at="2024-11-13T21:59:55Z" name="Suite" finished-at="2024-11-13T21:59:55Z" duration-ms="94">
     <groups>
     </groups>
-    <test started-at="2024-11-13T20:56:28Z" name="Test" finished-at="2024-11-13T20:56:58Z" duration-ms="30189">
+    <test started-at="2024-11-13T21:59:55Z" name="Test" finished-at="2024-11-13T21:59:55Z" duration-ms="94">
       <class name="com.ghate.tests.LoginpageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.ghate.tests.LoginpageTest@68267da0]" started-at="2024-11-13T20:56:28Z" name="setup" finished-at="2024-11-13T20:56:51Z" duration-ms="22702" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ghate.tests.LoginpageTest@2898ac89]" started-at="2024-11-13T21:59:55Z" name="setup" finished-at="2024-11-13T21:59:55Z" duration-ms="13" status="FAIL">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problem: 
+url cannot be resolved to a variable
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problem: 
+url cannot be resolved to a variable
+
+at com.ghate.driver.Driver.initDriver(Driver.java:27)
+at com.ghate.tests.BaseTest.setup(BaseTest.java:17)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test1()[pri:0, instance:com.ghate.tests.LoginpageTest@68267da0]" started-at="2024-11-13T20:56:51Z" name="test1" finished-at="2024-11-13T20:56:54Z" duration-ms="3885" status="PASS">
+        <test-method signature="test1()[pri:0, instance:com.ghate.tests.LoginpageTest@2898ac89]" started-at="2024-11-13T21:59:55Z" name="test1" finished-at="2024-11-13T21:59:55Z" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problem: 
+url cannot be resolved to a variable
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problem: 
+url cannot be resolved to a variable
+
+at com.ghate.driver.Driver.initDriver(Driver.java:27)
+at com.ghate.tests.BaseTest.setup(BaseTest.java:17)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="tesrDown()[pri:0, instance:com.ghate.tests.LoginpageTest@68267da0]" started-at="2024-11-13T20:56:54Z" name="tesrDown" finished-at="2024-11-13T20:56:58Z" duration-ms="3523" status="PASS">
+        <test-method is-config="true" signature="tesrDown()[pri:0, instance:com.ghate.tests.LoginpageTest@2898ac89]" started-at="2024-11-13T21:59:55Z" name="tesrDown" finished-at="2024-11-13T21:59:55Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tesrDown -->
       </class> <!-- com.ghate.tests.LoginpageTest -->
       <class name="com.ghate.tests.HomePageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.ghate.tests.HomePageTest@2638011]" started-at="2024-11-13T20:56:28Z" name="setup" finished-at="2024-11-13T20:56:50Z" duration-ms="22590" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ghate.tests.HomePageTest@683dbc2c]" started-at="2024-11-13T21:59:55Z" name="setup" finished-at="2024-11-13T21:59:55Z" duration-ms="14" status="FAIL">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problem: 
+url cannot be resolved to a variable
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problem: 
+url cannot be resolved to a variable
+
+at com.ghate.driver.Driver.initDriver(Driver.java:27)
+at com.ghate.tests.BaseTest.setup(BaseTest.java:17)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test2()[pri:0, instance:com.ghate.tests.HomePageTest@2638011]" started-at="2024-11-13T20:56:50Z" name="test2" finished-at="2024-11-13T20:56:55Z" duration-ms="4143" status="PASS">
+        <test-method signature="test2()[pri:0, instance:com.ghate.tests.HomePageTest@683dbc2c]" started-at="2024-11-13T21:59:55Z" name="test2" finished-at="2024-11-13T21:59:55Z" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problem: 
+url cannot be resolved to a variable
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problem: 
+url cannot be resolved to a variable
+
+at com.ghate.driver.Driver.initDriver(Driver.java:27)
+at com.ghate.tests.BaseTest.setup(BaseTest.java:17)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method is-config="true" signature="tesrDown()[pri:0, instance:com.ghate.tests.HomePageTest@2638011]" started-at="2024-11-13T20:56:55Z" name="tesrDown" finished-at="2024-11-13T20:56:58Z" duration-ms="3109" status="PASS">
+        <test-method is-config="true" signature="tesrDown()[pri:0, instance:com.ghate.tests.HomePageTest@683dbc2c]" started-at="2024-11-13T21:59:55Z" name="tesrDown" finished-at="2024-11-13T21:59:55Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tesrDown -->

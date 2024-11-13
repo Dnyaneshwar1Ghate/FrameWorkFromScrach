@@ -5,6 +5,7 @@ import java.util.Objects;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.ghate.constants.FrameworkConstants;
+import com.ghate.util.ReadPropertyFile;
 
 public class Driver {
 	
@@ -14,7 +15,7 @@ public class Driver {
 	}
 	
 	
-	public static void initDriver()
+	public static void initDriver() throws Exception
 	{
 		
 		
@@ -23,7 +24,7 @@ public class Driver {
 			System.setProperty("webdriver.gecko.driver",FrameworkConstants.getFirepath());
 			
 			DriverManager.setDriver(new FirefoxDriver());
-			DriverManager.getDriver().get("https://google.com");
+			DriverManager.getDriver().get(ReadPropertyFile.getValue("url"));
 		}
 	}
 
