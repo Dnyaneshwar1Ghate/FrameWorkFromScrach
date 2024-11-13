@@ -8,12 +8,8 @@ public class HomePageTest extends BaseTest {
 	@Test
 	void test3() throws InterruptedException
 	{
-
-
 		driver.findElement(By.name("q")).sendKeys("All About Testing",Keys.ENTER);
 		Thread.sleep(3000);
-
-
 	}
 
 }
