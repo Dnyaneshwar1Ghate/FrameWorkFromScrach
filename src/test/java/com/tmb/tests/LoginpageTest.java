@@ -9,7 +9,7 @@ import com.tbb.driver.Driver;
 
 
 
-public class LoginpageTest extends BaseTest {
+public final class LoginpageTest extends BaseTest {
 
 	private LoginpageTest()
 	{

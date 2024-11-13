@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.tbb.driver.Driver;
 
-public class HomePageTest extends BaseTest {
+public final class HomePageTest extends BaseTest {
 	private HomePageTest()
 	{
 		
