@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 import com.ghate.driver.Driver;
+import com.ghate.driver.DriverManager;
 
 public final class HomePageTest extends BaseTest {
 	private HomePageTest()
@@ -15,7 +16,7 @@ public final class HomePageTest extends BaseTest {
 	void test2() throws InterruptedException
 	{
 		Driver.initDriver();
-		Driver.getDriver().findElement(By.name("q")).sendKeys("All About Testing",Keys.ENTER);
+		DriverManager.getDriver().findElement(By.name("q")).sendKeys("All About Testing",Keys.ENTER);
 		Thread.sleep(3000);
 	}
 

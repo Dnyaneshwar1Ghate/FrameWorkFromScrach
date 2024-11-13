@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 import com.ghate.driver.Driver;
+import com.ghate.driver.DriverManager;
 
 
 
@@ -19,7 +20,7 @@ public final class LoginpageTest extends BaseTest {
 	@Test
 	void test1() throws InterruptedException
 	{	
-		Driver.getDriver().findElement(By.name("q")).sendKeys("Automation",Keys.ENTER);
+		DriverManager.getDriver().findElement(By.name("q")).sendKeys("Automation",Keys.ENTER);
 		Thread.sleep(3000);
 	}
 	

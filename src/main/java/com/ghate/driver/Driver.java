@@ -11,22 +11,7 @@ public class Driver {
 
 	private static WebDriver driver;
 	
-	private static ThreadLocal<WebDriver> dr=new ThreadLocal<>();
 	
-	public static WebDriver getDriver()
-	{
-		return dr.get();
-		
-	}
-	public static void setDriver(WebDriver driverref)
-	{
-		dr.set(driverref);
-	}
-	
-	public static void unLoad()
-	{
-		dr.remove();
-	}
 	
 	
 	public static void initDriver()
@@ -35,17 +20,17 @@ public class Driver {
 		{
 			System.setProperty("webdriver.gecko.driver",FrameworkConstants.getFirepath());
 			driver = new FirefoxDriver();
-			setDriver(driver);
-			getDriver().get("https://google.com");
+			DriverManager.setDriver(driver);
+			DriverManager.getDriver().get("https://google.com");
 		}
 	}
 
 	public static void quitDriver()
 	{
-		if(Objects.nonNull(getDriver()))
+		if(Objects.nonNull(DriverManager.getDriver()))
 		{
-			getDriver().quit();
-			unLoad();
+			DriverManager.getDriver().quit();
+			DriverManager.unLoad();
 			
 		}
 	}
