@@ -1,25 +1,25 @@
 package com.tmb.tests;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import com.tmb.constants.FrameworkConstants;
+import com.tbb.driver.Driver;
 
 public class BaseTest {
-	WebDriver driver;
+	
+	protected BaseTest()
+	{
+		
+	}
 	@BeforeMethod
 	public void setup()
 	{
-		System.setProperty("webdriver.gecko.driver",FrameworkConstants.getFirepath());
-		driver = new FirefoxDriver();
-		driver.get("https://google.com");
+		Driver.initDriver();
+		
 	}
 	@AfterMethod
 	public void tesrDown()
 	{
-		driver.quit();
-
+		Driver.quitDriver();
 	}
 }
