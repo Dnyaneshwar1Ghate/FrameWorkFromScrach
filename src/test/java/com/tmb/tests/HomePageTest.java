@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
-import com.tbb.driver.Driver;
+import com.tmb.driver.Driver;
 
 public final class HomePageTest extends BaseTest {
 	private HomePageTest()
