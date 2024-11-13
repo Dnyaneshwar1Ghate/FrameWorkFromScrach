@@ -19,7 +19,7 @@ public final class LoginpageTest extends BaseTest {
 	@Test
 	void test1() throws InterruptedException
 	{	
-		Driver.driver.findElement(By.name("q")).sendKeys("Automation",Keys.ENTER);
+		Driver.getDriver().findElement(By.name("q")).sendKeys("Automation",Keys.ENTER);
 		Thread.sleep(3000);
 	}
 	

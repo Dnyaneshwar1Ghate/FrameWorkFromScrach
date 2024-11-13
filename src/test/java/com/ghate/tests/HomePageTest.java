@@ -15,7 +15,7 @@ public final class HomePageTest extends BaseTest {
 	void test2() throws InterruptedException
 	{
 		Driver.initDriver();
-		Driver.driver.findElement(By.name("q")).sendKeys("All About Testing",Keys.ENTER);
+		Driver.getDriver().findElement(By.name("q")).sendKeys("All About Testing",Keys.ENTER);
 		Thread.sleep(3000);
 	}
 
