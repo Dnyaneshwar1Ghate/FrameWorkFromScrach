@@ -25,7 +25,7 @@ public class Driver {
 			
 			DriverManager.setDriver(new FirefoxDriver());
 			//Thread.sleep(3000);
-			DriverManager.getDriver().get(ReadPropertyFile.getValue("url"));
+			DriverManager.getDriver().get(ReadPropertyFile.get("url"));
 			//Thread.sleep(3000);
 		}
 	}
