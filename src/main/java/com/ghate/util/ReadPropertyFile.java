@@ -13,7 +13,7 @@ public final class ReadPropertyFile {
 	public static String getValue(String key1) throws Exception
 	{
 		Properties property=new Properties();
-		FileInputStream file=new FileInputStream(System.getProperty(("user.dir")+"config.properties"));
+		FileInputStream file=new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/config/config.properties");
 		property.load(file);
 		String value=property.getProperty(key1);
 		if(value==null)
