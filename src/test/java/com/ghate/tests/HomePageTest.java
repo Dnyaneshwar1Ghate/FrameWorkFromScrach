@@ -42,7 +42,7 @@ public final class HomePageTest extends BaseTest {
 		for(WebElement elem : elements)
 		{
 			
-			if(elem.getText().equalsIgnoreCase("Testing mini bytes -youtube"))
+			if(elem.getText().equalsIgnoreCase("Testing Mini Bytes"))
 			{
 				isElementPresetn=true;
 				break;
