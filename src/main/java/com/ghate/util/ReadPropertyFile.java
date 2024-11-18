@@ -35,13 +35,13 @@ public final class ReadPropertyFile {
 //			}
 			
 			
-			//for(Map.Entry<Object, Object> entry:property.entrySet())
-			//{
-			//	configMap.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()));
-			//}
+			for(Map.Entry<Object, Object> entry:property.entrySet())
+			{
+				configMap.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()));
+			}
 			
 			//lambda expression
-			property.entrySet().forEach(entry ->configMap.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue())));
+			//property.entrySet().forEach(entry ->configMap.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue())));
 			
 			
 		}catch(FileNotFoundException e)
