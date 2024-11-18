@@ -3,6 +3,7 @@ package com.ghate.util;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Objects;
 import java.util.Properties;
 
 public final class ReadPropertyFile {
@@ -29,13 +30,13 @@ public final class ReadPropertyFile {
 	}
 	public static String getValue(String key1) throws Exception
 	{
-		String value=property.getProperty(key1);
-		if(value==null)
+		
+		if(Objects.isNull(property.getProperty(key1)) || Objects.isNull(key1))
 		{
 			throw new Exception("Property name"+key1+"is not found , please check config.properties file ");
 			
 		}
-		return value;
+		return property.getProperty(key1);
 		 
 
 
