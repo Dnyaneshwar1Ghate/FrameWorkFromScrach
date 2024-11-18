@@ -10,7 +10,7 @@ public final class LoginpageTest extends BaseTest {
 
 	private LoginpageTest()
 	{
-		
+	
 	}
 	
 	
