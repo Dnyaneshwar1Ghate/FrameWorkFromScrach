@@ -8,6 +8,8 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
 
+import com.ghate.constants.FrameworkConstants;
+
 /**
  * @author Lenovo
  *
@@ -25,7 +27,7 @@ public final class ReadPropertyFile {
 	static {
 		try
 		{
-			FileInputStream file=new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/config/config.properties");
+			FileInputStream file=new FileInputStream(FrameworkConstants.getConfigfilepath());
 			property.load(file);
 			
 			

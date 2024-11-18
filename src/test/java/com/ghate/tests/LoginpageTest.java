@@ -10,7 +10,8 @@ public final class LoginpageTest extends BaseTest {
 
 	private LoginpageTest()
 	{
-		}
+		
+	}
 
 	@Test
 	void test1() throws InterruptedException

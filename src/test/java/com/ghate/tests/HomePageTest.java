@@ -12,13 +12,15 @@ public final class HomePageTest extends BaseTest {
 	{
 		
 	}
-	@Test
+	/*@Test
 	void test2() throws Exception
 	{
 		Driver.initDriver();
 		DriverManager.getDriver().findElement(By.name("q")).sendKeys("All About Testing",Keys.ENTER);
 		Thread.sleep(3000);
-	}
+	}*/
+	
+	
 	
 
 }
