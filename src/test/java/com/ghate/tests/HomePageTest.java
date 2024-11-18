@@ -31,7 +31,7 @@ public final class HomePageTest extends BaseTest {
 		String title=DriverManager.getDriver().getTitle();
 		Assert.assertTrue(Objects.nonNull(title));
 		Assert.assertTrue(title.toLowerCase().contains("google search"));
-		Assert.assertTrue(title.toLowerCase().matches("\\w.*"+"gooel.com search"));
+		Assert.assertTrue(title.toLowerCase().matches("\\w.*"+"google search"));
 		Assert.assertTrue(title.length()>15);
 		Assert.assertTrue(title.length()<100);
 		List<WebElement> elements=DriverManager.getDriver().findElements(By.xpath("//h3/spam"));
