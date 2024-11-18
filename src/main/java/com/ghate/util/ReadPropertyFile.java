@@ -40,7 +40,7 @@ public final class ReadPropertyFile {
 			//	configMap.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()));
 			//}
 			
-			////lambda expression
+			////lambda expression ADDED
 			property.entrySet().forEach(entry ->configMap.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue())));
 			
 			
