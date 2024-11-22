@@ -56,7 +56,7 @@ public final class ReadPropertyFile {
 		
 	}
 	
-	public static String get(String key) throws Exception
+	public static String getValue(String key) throws Exception
 	{
 		if(Objects.isNull(key) || Objects.isNull(configMap.get(key)))
 		{

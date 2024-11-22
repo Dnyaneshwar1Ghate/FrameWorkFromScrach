@@ -25,15 +25,16 @@ public class Driver {
 			
 			DriverManager.setDriver(new FirefoxDriver());
 			//Thread.sleep(3000);
-			DriverManager.getDriver().get(ReadPropertyFile.get("url"));
+			DriverManager.getDriver().get(ReadPropertyFile.getValue("url"));
 			//Thread.sleep(3000);
 		}
 	}
 
-	public static void quitDriver()
+	public static void quitDriver() 
 	{
 		if(Objects.nonNull(DriverManager.getDriver()))
 		{
+		
 			DriverManager.getDriver().quit();
 			DriverManager.unLoad();
 			
