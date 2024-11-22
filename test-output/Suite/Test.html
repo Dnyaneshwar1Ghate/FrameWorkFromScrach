@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 19 03:06:10 IST 2024</td>
+<td>Started on:</td><td>Fri Nov 22 05:38:14 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>16 seconds (16228 ms)</td>
+<tr><td>Total time:</td><td>15 seconds (15980 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,18 +76,20 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.ghate.tests.HomePageTest.TestCase1()'><b>TestCase1</b><br>Test class: com.ghate.tests.HomePageTest</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at com.ghate.tests.HomePageTest.TestCase1(HomePageTest.java:34)
+<td><div><pre>java.lang.AssertionError: expected [10] but found [0]
+	at com.ghate.tests.HomePageTest.TestCase1(HomePageTest.java:41)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1290803070", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1290803070'><pre>java.lang.AssertionError: expected [true] but found [false]
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace425789084", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace425789084'><pre>java.lang.AssertionError: expected [10] but found [0]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at com.ghate.tests.HomePageTest.TestCase1(HomePageTest.java:34)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at com.ghate.tests.HomePageTest.TestCase1(HomePageTest.java:41)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -102,8 +104,8 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>0</td>
-<td>com.ghate.tests.HomePageTest@2898ac89</td></tr>
+<td>3</td>
+<td>com.ghate.tests.HomePageTest@683dbc2c</td></tr>
 </table><p>
 </body>
 </html>
