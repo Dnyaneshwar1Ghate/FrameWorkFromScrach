@@ -13,12 +13,8 @@ public class Driver {
 	{
 		
 	}
-	
-	
 	public static void initDriver() throws Exception
 	{
-		
-		
 		if(Objects.isNull(DriverManager.getDriver()))
 		{
 			System.setProperty("webdriver.gecko.driver",FrameworkConstants.getFirepath());
@@ -34,11 +30,9 @@ public class Driver {
 	{
 		if(Objects.nonNull(DriverManager.getDriver()))
 		{
-		
 			DriverManager.getDriver().quit();
 			DriverManager.unLoad();
-			
-			
+		
 		}
 	}
 
