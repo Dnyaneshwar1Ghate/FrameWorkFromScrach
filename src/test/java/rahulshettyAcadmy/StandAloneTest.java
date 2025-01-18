@@ -26,9 +26,9 @@ public class StandAloneTest {
 			
 			List<WebElement> products =driver.findElements(By.cssSelector(".mb-3"));
 			System.out.println(products.size());
-			WebElement pro=products.stream().filter(product->product.findElement(By.cssSelector("b")).getText().equals("ZARA COAT 3")).findFirst().orElse(null);
+			WebElement pro=products.stream().filter(product->product.findElement(By.cssSelector("b")).getText().equals("IPHONE 13 PRO")).findFirst().orElse(null);
 			
-			
+			pro.findElement(By.cssSelector(".card-body button:last-of-type")).click();
 			
 		
 		
