@@ -1,4 +1,4 @@
-package rahulShettyAcadmey.paageobjects;
+package rahulShettyAcadmey.pageobjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

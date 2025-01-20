@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import rahulShettyAcadmey.paageobjects.landingPage;
+import rahulShettyAcadmey.pageobjects.landingPage;
 
 public class StandAloneTest {
 	public static void main(String[] args) {
