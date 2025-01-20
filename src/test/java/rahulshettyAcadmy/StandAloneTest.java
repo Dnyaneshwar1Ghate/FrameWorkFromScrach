@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -53,8 +54,22 @@ public class StandAloneTest {
 
 		Actions a = new Actions(driver);
 		a.sendKeys(driver.findElement(By.cssSelector("[placeholder='Select Country']")), "india").build().perform();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ta-results")));
 		
-		wait.until(Excep))
+		driver.findElement(By.xpath("(//button[contains(@class,'ta-item')])[2]")).click();
+		
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+
+	//	jse.executeScript("scroll(250, 0)"); // if the element is on top.
+		jse.executeScript("scroll(1085, 602)");
+		
+		driver.findElement(By.cssSelector(".action__submit ")).click();
+
+		String conformMessge = driver.findElement(By.cssSelector(".hero-primary")).getText();
+		Assert.assertTrue(conformMessge.equalsIgnoreCase("Thankyou for the order.") );
+		
+		driver.close();
 
 	}
 
