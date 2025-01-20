@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import rahulshettyacademy.AbstractComponents.AbstractComponent;
 
+
 public class landingPage extends AbstractComponent {
 	WebDriver driver;
 

@@ -1,5 +1,6 @@
 package rahulshettyAcadmy;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -14,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import net.bytebuddy.implementation.bytecode.Duplication;
 import rahulShettyAcadmey.pageobjects.landingPage;
 import rahulShettyAcadmey.pageobjects.productCatlog;
 
@@ -24,14 +26,14 @@ public class StandAloneTest {
 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	//	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
 		
-		WebDriverWait wait=new WebDriverWait(driver,10);
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
 		landingPage lp = new landingPage(driver);
 		lp.goTo();
 		lp.loginApplication("dnyaneshwarghate1010@gmail.com", "Dghate@2025");
-		
+	
 		productCatlog pc=new productCatlog(driver);
 		List<WebElement> products=pc.getProductList();
 		pc.addProductToCart(proDuctName);		
@@ -39,8 +41,7 @@ public class StandAloneTest {
 		driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
 
 		List<WebElement> cartProducts = driver.findElements(By.cssSelector(".cartSection h3"));
-		Boolean match = cartProducts.stream()
-				.anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(proDuctName));
+		Boolean match = cartProducts.stream().anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(proDuctName));
 		Assert.assertTrue(match);
 		driver.findElement(By.cssSelector(".totalRow button")).click();
 
@@ -53,11 +54,16 @@ public class StandAloneTest {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("scroll(1085, 700)");
 
-		driver.findElement(By.cssSelector(".action__submit ")).click();
+		//driver.findElement(By.cssSelector(".action__submit ")).click();
+		
+		WebElement element = driver.findElement(By.cssSelector(".action__submit"));
+
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().perform();
 
 		String conformMessge = driver.findElement(By.cssSelector(".hero-primary")).getText();
 		Assert.assertTrue(conformMessge.equalsIgnoreCase("Thankyou for the order."));
-
+	
 		driver.quit();
 
 	}

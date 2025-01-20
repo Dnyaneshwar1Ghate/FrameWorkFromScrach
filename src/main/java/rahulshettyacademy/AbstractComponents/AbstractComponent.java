@@ -15,15 +15,15 @@ public class AbstractComponent {
 		this.driver=driver;
 	}
 
-	public void waitForElementToAppear(By FindBy) {
+	public void waitForElementToAppear(By findBy) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("FindBy")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 	}
 
 	public void waitForElementToDisAppear(WebElement ele)
 	{
-		WebDriverWait wait=new WebDriverWait(driver,5);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.invisibilityOf(ele));
 	}
 }
