@@ -47,14 +47,12 @@ public class StandAloneTest {
 		driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
 
 		List<WebElement> cartProducts = driver.findElements(By.cssSelector(".cartSection h3"));
-		Boolean match = cartProducts.stream()
-				.anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(proDuctName));
+		Boolean match = cartProducts.stream().anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(proDuctName));
 		Assert.assertTrue(match);
 		driver.findElement(By.cssSelector(".totalRow button")).click();
 
 		Actions a = new Actions(driver);
 		a.sendKeys(driver.findElement(By.cssSelector("[placeholder='Select Country']")), "india").build().perform();
-
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ta-results")));
 		
 		driver.findElement(By.xpath("(//button[contains(@class,'ta-item')])[2]")).click();
@@ -63,7 +61,6 @@ public class StandAloneTest {
 
 	//	jse.executeScript("scroll(250, 0)"); // if the element is on top.
 		jse.executeScript("scroll(1085, 602)");
-		
 		driver.findElement(By.cssSelector(".action__submit ")).click();
 
 		String conformMessge = driver.findElement(By.cssSelector(".hero-primary")).getText();
