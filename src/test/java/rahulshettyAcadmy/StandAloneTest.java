@@ -15,6 +15,7 @@ import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import rahulShettyAcadmey.pageobjects.landingPage;
+import rahulShettyAcadmey.pageobjects.productCatlog;
 
 public class StandAloneTest {
 	public static void main(String[] args) {
@@ -23,33 +24,17 @@ public class StandAloneTest {
 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-
-		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		driver.get("https://rahulshettyacademy.com/client");
-
+		driver.manage().window().maximize();
+		
+		WebDriverWait wait=new WebDriverWait(driver,10);
 		landingPage lp = new landingPage(driver);
-
-		driver.findElement(By.id("userEmail")).sendKeys("dnyaneshwarghate1010@gmail.com");
-		driver.findElement(By.id("userPassword")).sendKeys("Dghate@2025");
-		driver.findElement(By.id("login")).click();
-
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector(".mb-3")));
-		List<WebElement> products = driver.findElements(By.cssSelector(".mb-3"));
-
-		System.out.println(products.size());
-		WebElement pro = products.stream()
-				.filter(product -> product.findElement(By.cssSelector("b")).getText().equals(proDuctName)).findFirst()
-				.orElse(null);
-
-		pro.findElement(By.cssSelector(".card-body button:last-of-type")).click();
-
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("#toast-container")));
-
-		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".ng-animating"))));
+		lp.goTo();
+		lp.loginApplication("dnyaneshwarghate1010@gmail.com", "Dghate@2025");
+		
+		productCatlog pc=new productCatlog(driver);
+		List<WebElement> products=pc.getProductList();
+		pc.addProductToCart(proDuctName);		
 
 		driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
 
@@ -66,7 +51,7 @@ public class StandAloneTest {
 		driver.findElement(By.xpath("(//button[contains(@class,'ta-item')])[2]")).click();
 
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("scroll(1085, 602)");
+		jse.executeScript("scroll(1085, 700)");
 
 		driver.findElement(By.cssSelector(".action__submit ")).click();
 

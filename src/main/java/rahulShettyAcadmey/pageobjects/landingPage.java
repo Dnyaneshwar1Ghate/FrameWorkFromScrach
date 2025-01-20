@@ -5,25 +5,37 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class landingPage {
+import rahulshettyacademy.AbstractComponents.AbstractComponent;
+
+public class landingPage extends AbstractComponent {
 	WebDriver driver;
 
 	public landingPage(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
 	// pageFactory
 	@FindBy(id = "userEmail")
-	WebElement userEmail;
-	
+	WebElement UserEmail;
+
 	@FindBy(id = "userPassword")
-	WebElement password;
-	
+	WebElement UserPass;
+
 	@FindBy(id = "login")
 	WebElement submit;
-	
-	
 
-	
+	public void loginApplication(String email, String password) {
+		UserEmail.sendKeys(email);
+		UserPass.sendKeys(password);
+		submit.click();
+
+	}
+
+	public void goTo() {
+
+		driver.get("https://rahulshettyacademy.com/client");
+	}
+
 }
