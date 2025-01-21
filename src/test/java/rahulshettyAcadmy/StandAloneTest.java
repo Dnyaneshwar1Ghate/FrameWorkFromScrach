@@ -26,7 +26,7 @@ public class StandAloneTest {
 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-	//	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
 		
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
@@ -38,10 +38,16 @@ public class StandAloneTest {
 		List<WebElement> products=pc.getProductList();
 		pc.addProductToCart(proDuctName);		
 
+		
+		
+		
+		
+		
 		driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
-
+		
 		List<WebElement> cartProducts = driver.findElements(By.cssSelector(".cartSection h3"));
 		Boolean match = cartProducts.stream().anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(proDuctName));
+		
 		Assert.assertTrue(match);
 		driver.findElement(By.cssSelector(".totalRow button")).click();
 
