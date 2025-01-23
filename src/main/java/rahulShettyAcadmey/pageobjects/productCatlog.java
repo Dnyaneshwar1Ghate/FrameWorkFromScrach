@@ -48,7 +48,7 @@ public class productCatlog extends AbstractComponent {
 				.orElse(null);
 		return pro;
 	}
-	public void addProductToCart(String productName)
+	public void addProductToCart(String productName) throws InterruptedException
 	{
 		WebElement Prod=getProductByName(productName);
 		Prod.findElement(addToCart).click();

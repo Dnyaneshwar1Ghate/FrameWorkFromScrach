@@ -16,11 +16,12 @@ import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.bytebuddy.implementation.bytecode.Duplication;
+import rahulShettyAcadmey.pageobjects.CartPage;
 import rahulShettyAcadmey.pageobjects.landingPage;
 import rahulShettyAcadmey.pageobjects.productCatlog;
 
 public class StandAloneTest {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		String proDuctName = "IPHONE 13 PRO";
 
@@ -30,25 +31,22 @@ public class StandAloneTest {
 		driver.manage().window().maximize();
 		
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
-		landingPage lp = new landingPage(driver);
-		lp.goTo();
-		lp.loginApplication("dnyaneshwarghate1010@gmail.com", "Dghate@2025");
+		landingPage landingPage = new landingPage(driver);
+		landingPage.goTo();
+		productCatlog productCatLogue=landingPage.loginApplication("dnyaneshwarghate1010@gmail.com", "Dghate@2025");
 	
-		productCatlog pc=new productCatlog(driver);
-		List<WebElement> products=pc.getProductList();
-		pc.addProductToCart(proDuctName);		
-
+	
+		List<WebElement> products=productCatLogue.getProductList();
+		productCatLogue.addProductToCart(proDuctName);
 		
-		
-		
-		
-		
-		driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
-		
-		List<WebElement> cartProducts = driver.findElements(By.cssSelector(".cartSection h3"));
-		Boolean match = cartProducts.stream().anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(proDuctName));
-		
+		CartPage cartpage=productCatLogue.gotoCartPage();
+				
+		Boolean match=cartpage.VeryFyProductDisplay(proDuctName);
 		Assert.assertTrue(match);
+		
+		
+		cartpage.goToCheckOut();
+
 		driver.findElement(By.cssSelector(".totalRow button")).click();
 
 		Actions a = new Actions(driver);
