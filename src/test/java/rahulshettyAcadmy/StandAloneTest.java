@@ -17,6 +17,8 @@ import org.testng.Assert;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.bytebuddy.implementation.bytecode.Duplication;
 import rahulShettyAcadmey.pageobjects.CartPage;
+import rahulShettyAcadmey.pageobjects.CheckOutPage;
+import rahulShettyAcadmey.pageobjects.conformationPage;
 import rahulShettyAcadmey.pageobjects.landingPage;
 import rahulShettyAcadmey.pageobjects.productCatlog;
 
@@ -29,45 +31,34 @@ public class StandAloneTest {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
-		
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		landingPage landingPage = new landingPage(driver);
 		landingPage.goTo();
-		productCatlog productCatLogue=landingPage.loginApplication("dnyaneshwarghate1010@gmail.com", "Dghate@2025");
-	
-	
-		List<WebElement> products=productCatLogue.getProductList();
+		productCatlog productCatLogue = landingPage.loginApplication("dnyaneshwarghate1010@gmail.com", "Dghate@2025");
+
+		List<WebElement> products = productCatLogue.getProductList();
 		productCatLogue.addProductToCart(proDuctName);
-		
-		CartPage cartpage=productCatLogue.gotoCartPage();
-				
-		Boolean match=cartpage.VeryFyProductDisplay(proDuctName);
+
+		CartPage cartpage = productCatLogue.gotoCartPage();
+
+		Boolean match = cartpage.VeryFyProductDisplay(proDuctName);
 		Assert.assertTrue(match);
-		
-		
-		cartpage.goToCheckOut();
+		CheckOutPage checkoutPage = cartpage.goToCheckOut();
+		checkoutPage.selectCountry("india");
+		conformationPage conformMessgae = checkoutPage.submitOrder();
 
-		driver.findElement(By.cssSelector(".totalRow button")).click();
-
-		Actions a = new Actions(driver);
-		a.sendKeys(driver.findElement(By.cssSelector("[placeholder='Select Country']")), "india").build().perform();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ta-results")));
-
-		driver.findElement(By.xpath("(//button[contains(@class,'ta-item')])[2]")).click();
-
+		// driver.findElement(By.cssSelector(".totalRow button")).click();
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("scroll(1085, 700)");
-
-		//driver.findElement(By.cssSelector(".action__submit ")).click();
-		
+		// driver.findElement(By.cssSelector(".action__submit ")).click();
 		WebElement element = driver.findElement(By.cssSelector(".action__submit"));
-
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).click().perform();
 
-		String conformMessge = driver.findElement(By.cssSelector(".hero-primary")).getText();
-		Assert.assertTrue(conformMessge.equalsIgnoreCase("Thankyou for the order."));
-	
+		String Messge = conformMessgae.verfyConformationPage();
+		Assert.assertTrue(Messge.equalsIgnoreCase("Thankyou for the order."));
+
 		driver.quit();
 
 	}

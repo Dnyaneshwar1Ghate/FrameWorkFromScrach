@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import rahulshettyacademy.AbstractComponents.AbstractComponent;
 
-
 public class landingPage extends AbstractComponent {
 	WebDriver driver;
 
@@ -31,7 +30,7 @@ public class landingPage extends AbstractComponent {
 		UserEmail.sendKeys(email);
 		UserPass.sendKeys(password);
 		submit.click();
-		productCatlog productCatLogue=new productCatlog(driver);
+		productCatlog productCatLogue = new productCatlog(driver);
 		return productCatLogue;
 
 	}
