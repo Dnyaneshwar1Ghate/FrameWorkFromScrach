@@ -27,18 +27,17 @@ public class CheckOutPage extends AbstractComponent {
 	WebElement Country;
 	
 
-	@FindBy(xpath="//button[contains(@class,'ta-item')])[2]")
+	@FindBy(xpath="(//button[contains(@class,'ta-item')])[2]")
 	WebElement selectCountry;
 	
 	By result=By.cssSelector(".ta-results");
 	
 	public void selectCountry(String countryname)
 	{
-	Actions a = new Actions(driver);
+		Actions a = new Actions(driver);
 		
 		a.sendKeys(Country, countryname).build().perform();
-		waitForElementToAppear(result);
-
+		waitForElementToAppear(By.cssSelector(".ta-results"));
 		selectCountry.click();
 	}
 

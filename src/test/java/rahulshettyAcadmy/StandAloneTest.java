@@ -46,16 +46,12 @@ public class StandAloneTest {
 		Assert.assertTrue(match);
 		CheckOutPage checkoutPage = cartpage.goToCheckOut();
 		checkoutPage.selectCountry("india");
+	
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
+
 		conformationPage conformMessgae = checkoutPage.submitOrder();
-
-		// driver.findElement(By.cssSelector(".totalRow button")).click();
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("scroll(1085, 700)");
-		// driver.findElement(By.cssSelector(".action__submit ")).click();
-		WebElement element = driver.findElement(By.cssSelector(".action__submit"));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(element).click().perform();
-
+		
 		String Messge = conformMessgae.verfyConformationPage();
 		Assert.assertTrue(Messge.equalsIgnoreCase("Thankyou for the order."));
 
